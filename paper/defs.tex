@@ -1,0 +1,246 @@
+% \input{../gww_defs}
+% \input{../gww_chars}
+
+\newcommand{\theterm}{Spring 1999}
+
+\newcounter{psctr}
+\newcounter{probctr}[psctr]
+%\renewcommand{\theprobctr}{\arabic{psctr}.\arabic{probctr}}
+\newcommand{\problem}[1]{%
+\addtocounter{probctr}{1}
+\vspace{.15in}
+
+\noindent\textbf{Problem \thepsctr.\theprobctr}\nopagebreak
+
+\noindent{#1}
+
+}
+\newcommand{\extraproblem}[1]{%
+\addtocounter{probctr}{1}
+\vspace{.15in}
+
+\noindent\textbf{Problem \thepsctr.\theprobctr\ (practice)}\nopagebreak
+
+\noindent{#1}
+
+}
+
+\DeclareMathAlphabet{\mathbsf}{OT1}{cmss}{bx}{n}% bold sans serif
+\DeclareMathAlphabet{\mathssf}{OT1}{cmss}{m}{sl}% slanted sans serif
+
+% define some useful uppercase Greek letters in regular and bold sf
+\DeclareSymbolFont{bsfletters}{OT1}{cmss}{bx}{n}  
+\DeclareSymbolFont{ssfletters}{OT1}{cmss}{m}{n}
+\DeclareMathSymbol{\bsfGamma}{0}{bsfletters}{'000}
+\DeclareMathSymbol{\ssfGamma}{0}{ssfletters}{'000}
+\DeclareMathSymbol{\bsfDelta}{0}{bsfletters}{'001}
+\DeclareMathSymbol{\ssfDelta}{0}{ssfletters}{'001}
+\DeclareMathSymbol{\bsfTheta}{0}{bsfletters}{'002}
+\DeclareMathSymbol{\ssfTheta}{0}{ssfletters}{'002}
+\DeclareMathSymbol{\bsfLambda}{0}{bsfletters}{'003}
+\DeclareMathSymbol{\ssfLambda}{0}{ssfletters}{'003}
+\DeclareMathSymbol{\bsfXi}{0}{bsfletters}{'004}
+\DeclareMathSymbol{\ssfXi}{0}{ssfletters}{'004}
+\DeclareMathSymbol{\bsfPi}{0}{bsfletters}{'005}
+\DeclareMathSymbol{\ssfPi}{0}{ssfletters}{'005}
+\DeclareMathSymbol{\bsfSigma}{0}{bsfletters}{'006}
+\DeclareMathSymbol{\ssfSigma}{0}{ssfletters}{'006}
+\DeclareMathSymbol{\bsfUpsilon}{0}{bsfletters}{'007}
+\DeclareMathSymbol{\ssfUpsilon}{0}{ssfletters}{'007}
+\DeclareMathSymbol{\bsfPhi}{0}{bsfletters}{'010}
+\DeclareMathSymbol{\ssfPhi}{0}{ssfletters}{'010}
+\DeclareMathSymbol{\bsfPsi}{0}{bsfletters}{'011}
+\DeclareMathSymbol{\ssfPsi}{0}{ssfletters}{'011}
+\DeclareMathSymbol{\bsfOmega}{0}{bsfletters}{'012}
+\DeclareMathSymbol{\ssfOmega}{0}{ssfletters}{'012}
+
+\newcommand{\fxfm}{\stackrel{\mathcal{F}}{\longleftrightarrow}}
+\newcommand{\lxfm}{\stackrel{\mathcal{L}}{\longleftrightarrow}}
+\newcommand{\zxfm}{\stackrel{\mathcal{Z}}{\longleftrightarrow}}
+
+\DeclareMathOperator*{\gltop}{\gtreqless}
+\newcommand{\glt}{\;\gltop^{\Hh=\svH_1}_{\Hh=\svH_0}\;}
+\newcommand{\glty}{\;\gltop^{\Hh(\svy)=\svH_1}_{\Hh(\svy)=\svH_0}\;}
+\newcommand{\gltby}{\;\gltop^{\Hh(\svby)=\svH_1}_{\Hh(\svby)=\svH_0}\;}
+\DeclareMathOperator*{\geltop}{\genfrac{}{}{0pt}{}{\ge}{<}}
+\newcommand{\gelty}{\;\geltop^{\Hh(\svy)=\svH_1}_{\Hh(\svy)=\svH_0}\;}
+\newcommand{\geltby}{\;\geltop^{\Hh(\svby)=\svH_1}_{\Hh(\svby)=\svH_0}\;}
+\renewcommand{\pe}{\Pr(e)}
+\renewcommand{\defeq}{\triangleq}
+\newcommand{\like}{\svlike}
+\newcommand{\rvlike}{\mathssf{L}}
+\newcommand{\sst}{\cl}
+\newcommand{\svlike}{L}
+\newcommand{\llike}{\rvllike}
+\newcommand{\rvllike}{\cl}
+\newcommand{\svllike}{l}
+\newcommand{\bllike}{\rvbllike}
+\newcommand{\rvbllike}{\boldsymbol{\cl}}
+\newcommand{\svbllike}{\mathbf{l}}
+\newcommand{\Qb}{\overline{Q}}
+\renewcommand{\comb}[2]{\binom{#1}{#2}}
+
+
+%% Random/sample variable/vector declarations.  Please add in alphabetical
+%% order.  First section is for capitals.  Second for lower case.
+% Capitals
+\newcommand{\rvA}{{\mathssf{A}}}	% A
+\newcommand{\svA}{A}
+\newcommand{\rvbA}{{\mathbsf{A}}}
+\newcommand{\svbA}{{\mathbf{A}}}
+\newcommand{\rvC}{{\mathssf{C}}}	% A
+\newcommand{\svC}{C}
+\newcommand{\rvbC}{{\mathbsf{C}}}
+\newcommand{\svbC}{{\mathbf{C}}}
+\newcommand{\rvD}{{\mathssf{D}}}	% D
+\newcommand{\svD}{D}
+\newcommand{\rvbD}{{\mathbsf{D}}}
+\newcommand{\svbD}{{\mathbf{D}}}
+\newcommand{\rvFh}{{\hat{\mathssf{F}}}}	% F
+\newcommand{\rvF}{{\mathssf{F}}}
+\newcommand{\rvHh}{{\hat{\mathssf{H}}}}	% H
+\newcommand{\rvH}{{\mathssf{H}}}
+\newcommand{\svH}{H}
+\newcommand{\rvI}{{\mathssf{I}}}        % I
+\newcommand{\svHh}{{\hat{\svH}}}
+\newcommand{\rvL}{{\mathssf{L}}}	% L
+\newcommand{\svL}{L}	
+\newcommand{\rvN}{{\mathssf{N}}}	% N
+\newcommand{\rvP}{{\mathssf{P}}}	% P
+\newcommand{\rvR}{{\mathssf{R}}}	% R
+\newcommand{\rvRh}{{\hat{\rvR}}}
+\newcommand{\rvS}{{\mathssf{S}}}	% S
+\newcommand{\rvSh}{{\hat{\rvS}}}
+\newcommand{\rvW}{{\mathssf{W}}}	% W
+\newcommand{\rvX}{{\mathssf{X}}}  	% X, random variable
+\newcommand{\svX}{X}		  	
+\newcommand{\rvXt}{{\tilde{\rvX}}}
+\newcommand{\rvY}{{\mathssf{Y}}}	% Y
+\newcommand{\rvZ}{{\mathssf{Z}}}	% Z
+
+\newcommand{\rva}{{\mathssf{a}}}	% a
+\newcommand{\rvah}{{\hat{\rva}}}
+\newcommand{\sva}{a}
+\newcommand{\svah}{{\hat{\sva}}}
+\newcommand{\rvba}{{\mathbsf{a}}}
+\newcommand{\svba}{{\mathbf{a}}}
+\newcommand{\rvb}{{\mathssf{b}}}	% b
+\newcommand{\rvc}{{\mathssf{c}}}	% c
+\newcommand{\rvch}{{\hat{\rvc}}}
+\newcommand{\svc}{c}
+\newcommand{\svch}{{\hat{\svc}}}
+\newcommand{\rvbc}{{\mathbsf{c}}}
+\newcommand{\svbc}{{\mathbf{c}}}
+
+\newcommand{\rvd}{{\mathssf{d}}}	% d
+\newcommand{\rvdh}{{\hat{\rvd}}}
+\newcommand{\svd}{d}
+\newcommand{\svdh}{{\hat{\svd}}}
+\newcommand{\rvbd}{{\mathbsf{d}}}
+\newcommand{\svbd}{{\mathbf{d}}}
+
+
+
+\newcommand{\rve}{{\mathssf{e}}}	% e
+\newcommand{\sve}{e}
+\newcommand{\rvbe}{{\mathbsf{e}}}
+\newcommand{\svbe}{{\mathbf{e}}}
+\newcommand{\rvf}{{\mathssf{f}}}	% f
+\newcommand{\svf}{f}
+\newcommand{\rvbf}{{\mathbsf{f}}}
+\newcommand{\svbf}{{\mathbf{f}}}
+\newcommand{\rvg}{{\mathssf{g}}}	% g
+\newcommand{\svg}{g}
+\newcommand{\rvbg}{{\mathbsf{g}}}
+\newcommand{\svbg}{{\mathbf{g}}}
+\newcommand{\rvh}{{\mathssf{h}}}	% h
+\newcommand{\svh}{h}
+\newcommand{\rvbh}{{\mathbsf{h}}}
+\newcommand{\svbh}{{\mathbf{h}}}
+\newcommand{\rvk}{{\mathssf{k}}}	% k
+\newcommand{\svk}{k}
+\newcommand{\rvm}{{\mathssf{m}}}	% m
+\newcommand{\svm}{m}
+\newcommand{\rvbm}{{\mathbsf{m}}}
+\newcommand{\svbm}{{\mathbf{m}}}
+\newcommand{\rvn}{{\mathssf{n}}}	% n
+\newcommand{\svn}{n}
+\newcommand{\rvbn}{{\mathbsf{n}}}
+\newcommand{\svbn}{{\mathbf{n}}}
+\newcommand{\rvp}{{\mathssf{p}}}	% p
+\newcommand{\svp}{p}
+\newcommand{\rvq}{{\mathssf{q}}}	% q
+\newcommand{\svq}{q}
+\newcommand{\rvr}{{\mathssf{r}}}	% r
+\newcommand{\rvbr}{{\mathbsf{r}}}
+\newcommand{\svr}{r}
+\newcommand{\rvs}{{\mathssf{s}}}	% s
+\newcommand{\rvbs}{{\mathbsf{s}}}
+\newcommand{\svs}{s}
+\newcommand{\svbs}{{\mathbf{s}}}
+\newcommand{\rvt}{{\mathssf{t}}}	% t
+\newcommand{\rvbt}{{\mathbsf{t}}}
+\newcommand{\svt}{t}
+\newcommand{\svbt}{{\mathbf{t}}}
+\newcommand{\rvu}{{\mathssf{u}}}	% u
+\newcommand{\svu}{u}
+\newcommand{\svuh}{{\hat{\svu}}}
+\newcommand{\rvbu}{{\mathbsf{u}}}
+\newcommand{\svbu}{{\mathbf{u}}}
+\newcommand{\rvv}{{\mathssf{v}}}	% v
+\newcommand{\svv}{v}
+\newcommand{\svvh}{{\hat{\svv}}}
+\newcommand{\rvbv}{{\mathbsf{v}}}
+\newcommand{\svbv}{{\mathbf{v}}}
+\newcommand{\rvvh}{{\hat{\rvv}}}
+\newcommand{\rvw}{{\mathssf{w}}}	% w
+\newcommand{\svw}{w}
+\newcommand{\rvwh}{{\hat{\rvw}}}
+\newcommand{\svwh}{{\hat{\svw}}}
+\newcommand{\rvbw}{{\mathbsf{w}}}
+\newcommand{\svbw}{{\mathbf{w}}}
+\newcommand{\rvx}{{\mathssf{x}}}	% x, random variable
+\newcommand{\rvxh}{{\hat{\rvx}}}
+\newcommand{\rvxt}{{\tilde{\rvx}}}
+\newcommand{\svx}{x}			% sample value
+\newcommand{\svxh}{{\hat{\svx}}}
+\newcommand{\svxt}{{\tilde{\svx}}}
+\newcommand{\rvbx}{{\mathbsf{x}}}
+\newcommand{\rvbxh}{{\hat{\rvbx}}}
+\newcommand{\rvbxt}{{\tilde{\rvbx}}}
+\newcommand{\svbx}{{\mathbf{\svx}}}
+\newcommand{\svbxt}{{\tilde{\svbx}}}
+\newcommand{\svbxh}{{\hat{\mathbf{x}}}}
+\newcommand{\rvy}{{\mathssf{y}}}	% y
+\newcommand{\rvyh}{{\hat{\mathssf{y}}}}
+\newcommand{\svy}{y}
+\newcommand{\rvyt}{{\tilde{\rvy}}}
+\newcommand{\svyt}{{\tilde{\svy}}}
+\newcommand{\svyh}{{\hat{\svy}}}
+\newcommand{\rvby}{{\mathbsf{y}}}
+\newcommand{\rvbyt}{{\tilde{\rvby}}}
+\newcommand{\svby}{{\mathbf{y}}}
+\newcommand{\svbyt}{{\tilde{\svby}}}
+\newcommand{\rvz}{{\mathssf{z}}}	% z
+\newcommand{\rvzh}{{\hat{\rvz}}}
+\newcommand{\rvzt}{{\tilde{\rvz}}}
+\newcommand{\svz}{z}
+\newcommand{\svzh}{{\hat{\svz}}}
+\newcommand{\rvbz}{{\mathbsf{z}}}
+\newcommand{\svbz}{{\mathbf{z}}}
+
+% Handle uppercase Greek differently
+\newcommand{\rvTh}{\ssfTheta}
+\newcommand{\svTh}{\Theta}
+\newcommand{\rvbTh}{\bsfTheta}
+\newcommand{\svbTh}{\boldsymbol{\Theta}}
+\newcommand{\rvPh}{\ssfPhi}
+\newcommand{\svPh}{\Phi}
+\newcommand{\rvbPh}{\bsfPhi}
+\newcommand{\svbPh}{\boldsymbol{\Phi}}
+
+\newcommand{\ddx}{\frac{\p}{\p \svx}}
+\newcommand{\ddbx}{\frac{\p}{\p\svbx}}
+
+%  --add new macros below this line--
+
