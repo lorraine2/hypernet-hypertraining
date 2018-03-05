@@ -6,7 +6,7 @@ from __future__ import print_function
 import autograd.numpy as np
 import autograd.numpy.random as npr
 from autograd import grad
-from autograd.util import flatten
+from autograd.misc.flatten import flatten
 from code.plotting import create_figure_and_axs, setup_ax_and_save
 from code.optimizers import adam, opt_params
 from code.data_loader import load_mnist

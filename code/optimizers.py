@@ -3,7 +3,7 @@
 """Code for network optimizers.
 """
 import autograd.numpy as np
-from autograd.util import flatten_func
+from autograd.misc.flatten import flatten_func
 
 
 def adam(grad, init_params, callback=None, num_iters=100, step_size=0.001, b1=0.9, b2=0.999, eps=10**-8, m=None,

@@ -7,8 +7,8 @@ import autograd.numpy as np
 import autograd.numpy.random as npr
 import autograd.scipy.stats.norm as norm
 from autograd import grad
-from autograd.util import flatten
-from autograd.optimizers import sgd
+from autograd.misc.flatten import flatten
+from autograd.misc.optimizers import sgd
 from code.plotting import create_figure_and_axs, setup_ax_and_save
 from code.optimizers import adam, opt_params
 from code.data_loader import load_mnist

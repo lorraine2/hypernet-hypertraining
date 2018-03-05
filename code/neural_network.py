@@ -6,7 +6,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 import autograd.numpy as np
 import autograd.scipy.stats.norm as norm
-from autograd.util import flatten
+from autograd.misc.flatten import flatten
 import autograd.numpy.random as npr
 
 

@@ -19,7 +19,7 @@ git clone https://github.com/lorraine2/hypernet-hypertraining.git
 In order to run the experiments you must download the following dependencies (which are included with requirements.txt):
 
 ```
-Autograd - pip install autograd==1.1.7
+Autograd - pip install autograd
 
 Matplotlib - pip install matplotlib
 

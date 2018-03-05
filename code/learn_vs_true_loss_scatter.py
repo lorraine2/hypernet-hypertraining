@@ -9,7 +9,7 @@ import autograd.numpy as np
 import autograd.numpy.random as npr
 import pickle
 from autograd import grad
-from autograd.util import flatten
+from autograd.misc.flatten import flatten
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from code.plotting import create_figure_and_axs, setup_ax_and_save, full_extent
