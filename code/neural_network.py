@@ -181,7 +181,7 @@ def get_loss_functions(unflatten_vector_to_network_weights, sample_hypers, hyper
         :return: The hypernetwork's objective (float).
         """
         rs = npr.RandomState(seed)
-        return np.mean([hyper_train_objective(hyper_weights, sample_hypers(hyper, rs)) for _ in range(batch_size)])
+        return np.mean(np.array([hyper_train_objective(hyper_weights, sample_hypers(hyper, rs)) for _ in range(batch_size)]))
 
     return (hypernet, train_objective, valid_objective, test_objective, hyper_train_objective, hyper_valid_objective,
             hyper_test_objective, hyper_train_stochastic_objective)

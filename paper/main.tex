@@ -224,7 +224,7 @@ We use $x$, $t$, and $y$ to refer to a data point, its label, and a prediction r
 \begin{figure}
 	%\vspace{-1cm}
 	\centering
-	\includegraphics[width=0.42\textwidth]{hypernets_global_small.png}
+	\includegraphics[width=0.42\textwidth]{hypernets_global_small.pdf}
 	\caption{
 	The validation loss of a neural net, estimated by cross-validation (crosses) or by a hypernetwork (line), which outputs $7,850$-dimensional network weights.
 	Cross-validation requires optimizing from scratch each time.
@@ -269,8 +269,8 @@ Second, differentiating through the hypernetwork allows us to optimize hyperpara
 	\begin{minipage}{1.0\textwidth}
 	\begin{tabular}{c|l}
 \phantom{aaaaaaaaaaaaaa} Training loss surface & \phantom{aaaaaaaa} Validation loss surface\\
-\includegraphics[width=0.5\textwidth, clip, trim=10mm 0mm 0mm 15mm]{train_loss_manifold.png} &
-\includegraphics[width=0.5\textwidth, clip, trim=35mm 0mm 0mm 18mm]{valid_loss_manifold.png}
+\includegraphics[width=0.5\textwidth, clip, trim=10mm 0mm 0mm 15mm]{train_loss_manifold.pdf} &
+\includegraphics[width=0.5\textwidth, clip, trim=35mm 0mm 0mm 18mm]{valid_loss_manifold.pdf}
 \end{tabular}
 \end{minipage}
 \caption{
@@ -545,7 +545,7 @@ This variant does not have asymptotic guarantees, but performs similarly to Algo
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\textwidth]{hypernets_local_small.png}
+\includegraphics[width=0.4\textwidth]{hypernets_local_small.pdf}
 \caption{
 Training and validation losses of a neural network, estimated by cross-validation (crosses) or a linear hypernetwork (lines).
 The hypernetwork's limited capacity makes it only accurate where  the hyperparameter distribution puts mass.
@@ -745,9 +745,9 @@ Algorithm~\ref{algLocal} is also less computationally expensive than Algorithms~
 	\hspace{-0.02\textwidth}
 	\begin{tabular}{@{\hskip3pt}c @{\hskip3pt}c @{\hskip3pt}c @{\hskip3pt}c} 
 	&GP mean&Hyper-training fixed&Hyper-training\\
-	\rotatebox{90}{\,\,\,\,\,\,\,\,\,\,\,\, Inferred loss}\hspace{-0.02\textwidth}&\includegraphics[width=0.14\textwidth]{ax0_scatter.png}&\includegraphics[width=0.14\textwidth]{ax1_scatter.png}&\includegraphics[width=0.14\textwidth]{ax2_scatter.png}\\
+	\rotatebox{90}{\,\,\,\,\,\,\,\,\,\,\,\, Inferred loss}\hspace{-0.02\textwidth}&\includegraphics[width=0.14\textwidth]{ax0_scatter.pdf}&\includegraphics[width=0.14\textwidth]{ax1_scatter.pdf}&\includegraphics[width=0.14\textwidth]{ax2_scatter.pdf}\\
 	&&True loss&\\
-	\rotatebox{90}{\,\,\,\,\,\,\,\,\,\,\,\,\,\,\, Frequency}&\includegraphics[width=0.14\textwidth]{ax0_hist.png}&\includegraphics[width=0.14\textwidth]{ax1_hist.png}&\includegraphics[width=0.14\textwidth]{ax2_hist.png}\\
+	\rotatebox{90}{\,\,\,\,\,\,\,\,\,\,\,\,\,\,\, Frequency}&\includegraphics[width=0.14\textwidth]{ax0_hist.pdf}&\includegraphics[width=0.14\textwidth]{ax1_hist.pdf}&\includegraphics[width=0.14\textwidth]{ax2_hist.pdf}\\
 	&&Inferred - true loss&\\
 	\end{tabular}
 	\caption{
@@ -884,8 +884,7 @@ We also note that the prospect of optimizing thousands of hyperparameters raises
 %We hope this initial exploration of stochastic hyperparameter optimization will inspire further refinements, such as hyper-regularization methods, or uncertainty-aware exploration using Bayesian hypernetworks.
 
 \subsubsection*{Acknowledgments}
-We thank Dougal Maclaurin, Daniel Flam-Shepard, Daniel Roy, and Jack Klys for helpful discussions.
-Also, we thank MITACS for funding.
+We thank Matthew MacKay, Dougal Maclaurin, Daniel Flam-Shepard, Daniel Roy, and Jack Klys for helpful discussions.
 
 \bibliography{main_bib}
 \bibliographystyle{icml2018}

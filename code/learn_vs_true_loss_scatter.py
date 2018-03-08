@@ -165,7 +165,7 @@ def experiment(train_data, valid_data, init_scale, num_iters_hypernet, step_size
                                                                                  identity)[0]),
                                   local_data_input, global_seed)
                   for local_data_input in local_data_inputs]
-        return np.mean(losses)
+        return np.mean(np.array(losses))
 
     def callback_weights_loss(weights, opt_iteration, g):
         """A callback for optimization.
@@ -197,7 +197,7 @@ def experiment(train_data, valid_data, init_scale, num_iters_hypernet, step_size
                                                                                  identity)[0]),
                                   local_data_input, global_seed)
                   for local_data_input in local_data_inputs]
-        return np.mean(losses)
+        return np.mean(np.array(losses))
 
     def callback_weights_loss_target(weights, opt_iteration, g):
         """A callback for optimization.
@@ -285,6 +285,7 @@ def experiment(train_data, valid_data, init_scale, num_iters_hypernet, step_size
         #if key is 0:
         extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
         fig.savefig('figures/ax' + str(key) + '_scatter.png', bbox_inches=extent.expanded(1.32, 1.15))
+        fig.savefig('figures/ax' + str(key) + '_scatter.pdf', bbox_inches=extent.expanded(1.32, 1.15))
         #else:
         #extent = full_extent(ax, do_yticks=False).transformed(fig.dpi_scale_trans.inverted())
         #fig.savefig('figures/ax' + str(key) + '_scatter.png', bbox_inches=extent.expanded(1.0, 1.15))
@@ -315,8 +316,10 @@ def experiment(train_data, valid_data, init_scale, num_iters_hypernet, step_size
         extent = full_extent(ax).transformed(fig.dpi_scale_trans.inverted())
         if key is 0:
             fig.savefig('figures/ax' + str(key) + '_hist.png', bbox_inches=extent) #.expand(1.32, 1.15))
+            fig.savefig('figures/ax' + str(key) + '_hist.pdf', bbox_inches=extent)
         else:
             fig.savefig('figures/ax' + str(key) + '_hist.png', bbox_inches=extent)
+            fig.savefig('figures/ax' + str(key) + '_hist.pdf', bbox_inches=extent)
 
 
 if __name__ == '__main__':

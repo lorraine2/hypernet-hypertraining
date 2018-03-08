@@ -51,8 +51,10 @@ def setup_ax_and_save(axs, fig, title, do_xticks=True, do_yticks=True, y_mod=150
 
         plt.draw()
         if dpi is not None:
+            fig.savefig('figures/' + title + '.pdf', bbox_inches='tight', dpi=dpi)
             fig.savefig('figures/' + title + '.png', bbox_inches='tight', dpi=dpi)
         else:
+            fig.savefig('figures/' + title + '.pdf', bbox_inches='tight')
             fig.savefig('figures/' + title + '.png', bbox_inches='tight')
         plt.pause(1.0 / 60.0)
 

@@ -131,6 +131,7 @@ def plot_train_loss_manifold(ms_size):
     ax.legend(numpoints=1, fancybox=True, bbox_to_anchor=(0.1, 0.75), borderaxespad=0.0, framealpha=0.0)
 
     # Save and display the figure.
+    fig.savefig('figures/train_loss_manifold.pdf', bbox_inches='tight')
     fig.savefig('figures/train_loss_manifold.png', bbox_inches='tight')
     plt.show()
 
@@ -232,6 +233,7 @@ def plot_valid_loss_manifold(ms_size):
     ax.legend(numpoints=1, fancybox=True, bbox_to_anchor=(1.45, 0.75), borderaxespad=0.0, framealpha=0.0)
 
     # Save and display the figure.
+    fig.savefig('figures/valid_loss_manifold.pdf', bbox_inches='tight')
     fig.savefig('figures/valid_loss_manifold.png', bbox_inches='tight')
     plt.show()
 
