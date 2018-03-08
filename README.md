@@ -88,6 +88,12 @@ The file `main_bib.bib` contains all bibliographic references.
 ├── code
 │   ├── __init__.py
 │   ├── __init__.pyc
+│   ├── __pycache__
+│   │   ├── __init__.cpython-35.pyc
+│   │   ├── data_loader.cpython-35.pyc
+│   │   ├── neural_network.cpython-35.pyc
+│   │   ├── optimizers.cpython-35.pyc
+│   │   └── plotting.cpython-35.pyc
 │   ├── data
 │   │   ├── t10k-images-idx3-ubyte.gz
 │   │   ├── t10k-labels-idx1-ubyte.gz
@@ -96,17 +102,27 @@ The file `main_bib.bib` contains all bibliographic references.
 │   ├── data_loader.py
 │   ├── data_loader.pyc
 │   ├── figures
+│   │   ├── ax0_hist.pdf
 │   │   ├── ax0_hist.png
+│   │   ├── ax0_scatter.pdf
 │   │   ├── ax0_scatter.png
+│   │   ├── ax1_hist.pdf
 │   │   ├── ax1_hist.png
+│   │   ├── ax1_scatter.pdf
 │   │   ├── ax1_scatter.png
+│   │   ├── ax2_hist.pdf
 │   │   ├── ax2_hist.png
+│   │   ├── ax2_scatter.pdf
 │   │   ├── ax2_scatter.png
-│   │   ├── hypernets_global_small.png
-│   │   ├── hypernets_local_small.png
+│   │   ├── hypernets_global_small.pdf
+│   │   ├── hypernets_local_small.pdf
+│   │   ├── learn_vs_true_loss_hist.pdf
 │   │   ├── learn_vs_true_loss_hist.png
+│   │   ├── learn_vs_true_loss_scatter.pdf
 │   │   ├── learn_vs_true_loss_scatter.png
+│   │   ├── train_loss_manifold.pdf
 │   │   ├── train_loss_manifold.png
+│   │   ├── valid_loss_manifold.pdf
 │   │   └── valid_loss_manifold.png
 │   ├── hypernets_global_small.py
 │   ├── hypernets_local_small.py
@@ -123,17 +139,25 @@ The file `main_bib.bib` contains all bibliographic references.
 ├── paper
 │   ├── algorithm.sty
 │   ├── algorithmic.sty
+│   ├── ax0_hist.pdf
 │   ├── ax0_hist.png
+│   ├── ax0_scatter.pdf
 │   ├── ax0_scatter.png
+│   ├── ax1_hist.pdf
 │   ├── ax1_hist.png
+│   ├── ax1_scatter.pdf
 │   ├── ax1_scatter.png
+│   ├── ax2_hist.pdf
 │   ├── ax2_hist.png
+│   ├── ax2_scatter.pdf
 │   ├── ax2_scatter.png
 │   ├── compare_number_layers.png
 │   ├── defs.tex
 │   ├── fancyhdr.sty
+│   ├── hypernets_global_small.pdf
 │   ├── hypernets_global_small.png
 │   ├── hypernets_local_large.pdf
+│   ├── hypernets_local_small.pdf
 │   ├── hypernets_local_small.png
 │   ├── icml2018.bst
 │   ├── icml2018.log
@@ -149,11 +173,13 @@ The file `main_bib.bib` contains all bibliographic references.
 │   ├── main_bib.bib
 │   ├── main_bib.log
 │   ├── natbib.sty
+│   ├── train_loss_manifold.pdf
 │   ├── train_loss_manifold.png
+│   ├── valid_loss_manifold.pdf
 │   └── valid_loss_manifold.png
 └── requirements.txt
 
-4 directories, 65 files
+5 directories, 90 files
 ```
 
 ## Authors
